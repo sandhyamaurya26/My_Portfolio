@@ -4,6 +4,8 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="description" content="Sandhya Mourya — Data Analytics Portfolio | BSc IT Graduate 2026"/>
+<meta name="color-scheme" content="light only"/>
+<meta name="theme-color" content="#F6FAFD"/>
 <title>Sandhya Mourya | Data Analytics Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
@@ -51,7 +53,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; color-scheme: light; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
@@ -366,7 +368,7 @@ section { padding: 6.5rem 5%; position: relative; }
 
 .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 .about-stat-card {
-  background: #0A1931;
+  background: var(--card);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 1.5rem 1.3rem;
@@ -375,9 +377,9 @@ section { padding: 6.5rem 5%; position: relative; }
 .about-stat-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lift); border-color: var(--teal); }
 .stat-number {
   font-family: var(--font-display);
-  font-size: 2.3rem; font-weight: 700; color: #B3CFE5; display: block; line-height: 1;
+  font-size: 2.3rem; font-weight: 700; color: var(--teal); display: block; line-height: 1;
 }
-.stat-label { font-size: 0.78rem; margin-top: 0.5rem; color: rgba(255, 255, 255, 0.442); letter-spacing: 0.02em; }
+.stat-label { font-size: 0.78rem; margin-top: 0.5rem; color: var(--ink-mute); letter-spacing: 0.02em; }
 
 /* ─── EDUCATION ─── */
 #education { background: var(--paper-alt); }
@@ -427,7 +429,7 @@ section { padding: 6.5rem 5%; position: relative; }
 .skill-name { font-size: 0.87rem; font-weight: 600; color: var(--ink); }
 .skill-pct { font-size: 0.76rem; color: var(--teal); font-family: var(--font-mono); font-weight: 600; }
 .skill-bar { height: 6px; background: var(--line); border-radius: 10px; overflow: hidden; }
-.skill-fill { height: 100%; background: linear-gradient(#0a1931e2, #4579a0); border-radius: 10px; width: 0; transition: width 1.3s cubic-bezier(.4,0,.2,1); }
+.skill-fill { height: 100%; background: linear-gradient(90deg, var(--teal), #B3CFE5); border-radius: 10px; width: 0; transition: width 1.3s cubic-bezier(.4,0,.2,1); }
 
 .tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: 0.9rem; grid-column: 1 / -1; margin-top: 0.5rem; }
 .tool-card {
@@ -435,7 +437,7 @@ section { padding: 6.5rem 5%; position: relative; }
   padding: 1.2rem 0.6rem; text-align: center; transition: all 0.3s; cursor: default;
 }
 .tool-card:hover { transform: translateY(-4px); border-color: var(--teal); box-shadow: var(--shadow-soft); }
-.tool-card i { font-size: 1.4rem; color:#102d5dc7; display: block; margin-bottom: 0.55rem; }
+.tool-card i { font-size: 1.4rem; color: var(--teal); display: block; margin-bottom: 0.55rem; }
 .tool-card span { font-size: 0.73rem; color: var(--ink-dim); font-weight: 600; }
 
 /* ─── PROJECTS ─── */
@@ -487,9 +489,10 @@ section { padding: 6.5rem 5%; position: relative; }
 #certifications { background: var(--paper); }
 #certifications p.intro-text { color: var(--ink-dim); margin-bottom: 2.4rem; font-size: 0.92rem; max-width: 480px; }
 .certs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 1.3rem; }
-.cert-card { border-radius: var(--radius); overflow: hidden; cursor: pointer; transition: all 0.3s; background: #7ea5c430; border: 1px solid var(--line); }
+.cert-card { border-radius: var(--radius); overflow: hidden; cursor: pointer; transition: all 0.3s; background: var(--card); border: 1px solid var(--line); }
 .cert-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lift); border-color: var(--teal); }
-.cert-img { height: 130px; background: var(--hero-bg); position: relative; border-bottom: 1px solid var(--line); }
+.cert-img { height: 160px; background: #EEF3F8; position: relative; border-bottom: 1px solid var(--line); padding: 8px; display: flex; align-items: center; justify-content: center; }
+.cert-img img { border-radius: 4px; }
 .cert-hover-overlay {
   position: absolute; inset: 0; background: rgba(74,127,167,0.75);
   display: flex; align-items: center; justify-content: center;
@@ -498,7 +501,7 @@ section { padding: 6.5rem 5%; position: relative; }
 .cert-card:hover .cert-hover-overlay { opacity: 1; }
 .cert-body { padding: 1rem 1.1rem; }
 .cert-body h4 { font-size: 0.85rem; font-weight: 700; margin-bottom: 0.25rem; color: var(--ink); }
-.cert-body span { font-size: 0.73rem; color: rgba(0, 0, 0, 0.636); }
+.cert-body span { font-size: 0.73rem; color: var(--ink-mute); }
 
 /* ─── MODAL ─── */
 .modal-overlay {
@@ -532,7 +535,7 @@ section { padding: 6.5rem 5%; position: relative; }
   background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
   padding: 2rem; transition: all 0.3s; position: relative; overflow: hidden;
 }
-.intern-card::before { content: ''; position: absolute; top: 0; left: 0; bottom: 0; width: 3px; background: linear-gradient(180deg, var(--teal), #081c40); }
+.intern-card::before { content: ''; position: absolute; top: 0; left: 0; bottom: 0; width: 3px; background: linear-gradient(180deg, var(--teal), #B3CFE5); }
 .intern-card:hover { border-color: var(--teal); box-shadow: var(--shadow-lift); transform: translateY(-4px); }
 .intern-badge {
   display: inline-flex; align-items: center; gap: 0.4rem; background: var(--teal-tint); border: 1px solid var(--teal-tint-strong);
@@ -595,7 +598,7 @@ footer { background: var(--paper-alt); border-top: 1px solid var(--line); paddin
 .footer-logo { font-family: var(--font-display); font-size: 1.6rem; font-weight: 700; margin-bottom: 0.8rem; color: var(--ink); }
 .footer-logo span { color: var(--teal); }
 .footer-socials { display: flex; justify-content: center; gap: 0.8rem; margin-bottom: 1.3rem; }
-footer .social-link { color:#102d5dc7; border-color: var(--line-strong); background: var(--card); }
+footer .social-link { color: var(--teal); border-color: var(--line-strong); background: var(--card); }
 footer .social-link:hover { color: var(--teal-deep); border-color: var(--teal); background: var(--teal-tint); }
 .footer-text { font-size: 0.8rem; color: var(--ink-mute); }
 
@@ -758,9 +761,9 @@ footer .social-link:hover { color: var(--teal-deep); border-color: var(--teal); 
         </div>
         <div class="stat-chips">
           <div class="stat-chip"><div class="stat-chip-val">7+ Projects</div><div class="stat-chip-text">Completed</div></div>
-          <div class="stat-chip"><div class="stat-chip-val">6+ Certifications</div><div class="stat-chip-text">Earned</div></div>
-          <div class="stat-chip"><div class="stat-chip-val">2 Internships</div><div class="stat-chip-text">Data Science . Cybersecurity</div></div>
-          <div class="stat-chip"><div class="stat-chip-val">India</div><div class="stat-chip-text">Open to Work</div></div>
+          <div class="stat-chip"><div class="stat-chip-val">5 Certs</div><div class="stat-chip-text">Earned</div></div>
+          <div class="stat-chip"><div class="stat-chip-val">2 Internships</div><div class="stat-chip-text">SQL · BI · Security</div></div>
+          <div class="stat-chip"><div class="stat-chip-val">India</div><div class="stat-chip-text">Open to Remote</div></div>
         </div>
       </div>
     </div>
@@ -785,9 +788,9 @@ footer .social-link:hover { color: var(--teal-deep); border-color: var(--teal); 
       </div>
       <div class="about-stats reveal-right">
         <div class="about-stat-card"><span class="stat-number">85%</span><span class="stat-label">BSc IT Aggregate</span></div>
-        <div class="about-stat-card"><span class="stat-number">7+</span><span class="stat-label">Projects </span></div>
-        <div class="about-stat-card"><span class="stat-number">6+</span><span class="stat-label">Certifications</span></div>
-        <div class="about-stat-card"><span class="stat-number">2+</span><span class="stat-label">Internships</span></div>
+        <div class="about-stat-card"><span class="stat-number">7+</span><span class="stat-label">Projects Shipped</span></div>
+        <div class="about-stat-card"><span class="stat-number">5</span><span class="stat-label">Certifications</span></div>
+        <div class="about-stat-card"><span class="stat-number">2</span><span class="stat-label">Internships</span></div>
       </div>
     </div>
   </div>
@@ -852,7 +855,7 @@ footer .social-link:hover { color: var(--teal-deep); border-color: var(--teal); 
       <div class="skill-category reveal">
         <h3><i class="fas fa-chart-pie"></i> Data Analytics</h3>
         <div class="skill-item"><div class="skill-row"><span class="skill-name">PostgreSQL</span><span class="skill-pct">95%</span></div><div class="skill-bar"><div class="skill-fill" data-width="95"></div></div></div>
-        <div class="skill-item"><div class="skill-row"><span class="skill-name">Python (Pandas, NumPy)</span><span class="skill-pct">70%</span></div><div class="skill-bar"><div class="skill-fill" data-width="70"></div></div></div>
+        <div class="skill-item"><div class="skill-row"><span class="skill-name">Python (Pandas, NumPy)</span><span class="skill-pct">60%</span></div><div class="skill-bar"><div class="skill-fill" data-width="60"></div></div></div>
         <div class="skill-item"><div class="skill-row"><span class="skill-name">MySQL Workbench</span><span class="skill-pct">80%</span></div><div class="skill-bar"><div class="skill-fill" data-width="80"></div></div></div>
         <div class="skill-item"><div class="skill-row"><span class="skill-name">SQL Server</span><span class="skill-pct">80%</span></div><div class="skill-bar"><div class="skill-fill" data-width="80"></div></div></div>
         <div class="skill-item"><div class="skill-row"><span class="skill-name">Power BI</span><span class="skill-pct">95%</span></div><div class="skill-bar"><div class="skill-fill" data-width="95"></div></div></div>
@@ -864,11 +867,11 @@ footer .social-link:hover { color: var(--teal-deep); border-color: var(--teal); 
         <div class="skill-item"><div class="skill-row"><span class="skill-name">Data Cleaning & Preprocessing</span><span class="skill-pct">87%</span></div><div class="skill-bar"><div class="skill-fill" data-width="87"></div></div></div>
         <div class="skill-item"><div class="skill-row"><span class="skill-name">Dashboard Development</span><span class="skill-pct">90%</span></div><div class="skill-bar"><div class="skill-fill" data-width="90"></div></div></div>
         <div class="skill-item"><div class="skill-row"><span class="skill-name">Data Analysis & Reporting</span><span class="skill-pct">86%</span></div><div class="skill-bar"><div class="skill-fill" data-width="86"></div></div></div>
-        <div class="skill-item"><div class="skill-row"><span class="skill-name">Statistical Analysis</span><span class="skill-pct">80%</span></div><div class="skill-bar"><div class="skill-fill" data-width="80"></div></div></div>
+        <div class="skill-item"><div class="skill-row"><span class="skill-name">Statistical Analysis</span><span class="skill-pct">75%</span></div><div class="skill-bar"><div class="skill-fill" data-width="75"></div></div></div>
         <h3 style="margin-top:1.6rem;"><i class="fas fa-layer-group"></i> Other</h3>
         <div class="skill-item"><div class="skill-row"><span class="skill-name">Web Development</span><span class="skill-pct">55%</span></div><div class="skill-bar"><div class="skill-fill" data-width="55"></div></div></div>
-        <div class="skill-item"><div class="skill-row"><span class="skill-name">Cybersecurity Fundamentals</span><span class="skill-pct">80%</span></div><div class="skill-bar"><div class="skill-fill" data-width="80"></div></div></div>
-        <div class="skill-item"><div class="skill-row"><span class="skill-name">Computer Networks</span><span class="skill-pct">50%</span></div><div class="skill-bar"><div class="skill-fill" data-width="50"></div></div></div>
+        <div class="skill-item"><div class="skill-row"><span class="skill-name">Cybersecurity Fundamentals</span><span class="skill-pct">60%</span></div><div class="skill-bar"><div class="skill-fill" data-width="60"></div></div></div>
+        <div class="skill-item"><div class="skill-row"><span class="skill-name">Computer Networks</span><span class="skill-pct">40%</span></div><div class="skill-bar"><div class="skill-fill" data-width="40"></div></div></div>
       </div>
 
       <div class="tools-grid reveal">
@@ -1015,37 +1018,37 @@ footer .social-link:hover { color: var(--teal-deep); border-color: var(--teal); 
     <div class="certs-grid">
 
       <div class="cert-card reveal" onclick="openModal('SQL — Skill Up','Completed the SQL Skill Up course from GeeksforGeeks, covering SQL fundamentals, database management, data querying, joins, subqueries, and aggregate functions. Strengthened my ability to extract, analyze, and manage data efficiently using SQL. (Apr 2026)', 'Certificate_SQL.png')">
-        <div class="cert-img"><img src="Certificate_SQL.png" alt="SQL Skill Up" style="width:100%;height:100%;object-fit:cover;display:block;"/><div class="cert-hover-overlay"><i class="fas fa-expand"></i></div></div>
+        <div class="cert-img"><img src="Certificate_SQL.png" alt="SQL Skill Up" style="width:100%;height:100%;object-fit:contain;display:block;"/><div class="cert-hover-overlay"><i class="fas fa-expand"></i></div></div>
         <div class="cert-body"><h4>SQL — Skill Up</h4><span>GeeksforGeeks</span></div>
       </div>
 
       <div class="cert-card reveal" onclick="openModal('Microsoft Power BI (Self Learning)','Completed the Microsoft Power BI course from Skill Course, covering data visualization, dashboard creation, report development, data transformation, and business intelligence concepts. (May 2026)', 'Certificate_PowerBI.png')">
-        <div class="cert-img"><img src="Certificate_PowerBI.png" alt="Microsoft Power BI" style="width:100%;height:100%;object-fit:cover;display:block;"/><div class="cert-hover-overlay"><i class="fas fa-expand"></i></div></div>
+        <div class="cert-img"><img src="Certificate_PowerBI.png" alt="Microsoft Power BI" style="width:100%;height:100%;object-fit:contain;display:block;"/><div class="cert-hover-overlay"><i class="fas fa-expand"></i></div></div>
         <div class="cert-body"><h4>Microsoft Power BI</h4><span>Skill Course</span></div>
       </div>
 
       <div class="cert-card reveal" onclick="openModal('Python for Beginners','Completed the Python for Beginners course from Simplilearn SkillUp — covering fundamentals, variables, data types, operators, conditionals, loops, functions, and basic problem-solving. (Jul 2026)', 'Python_Begginers_Certificate.png')">
-        <div class="cert-img"><img src="Python_Begginers_Certificate.png" alt="Python for Beginners" style="width:100%;height:100%;object-fit:cover;display:block;"/><div class="cert-hover-overlay"><i class="fas fa-expand"></i></div></div>
+        <div class="cert-img"><img src="Python_Begginers_Certificate.png" alt="Python for Beginners" style="width:100%;height:100%;object-fit:contain;display:block;"/><div class="cert-hover-overlay"><i class="fas fa-expand"></i></div></div>
         <div class="cert-body"><h4>Python for Beginners</h4><span>Simplilearn SkillUp</span></div>
       </div>
 
       <div class="cert-card reveal" onclick="openModal('Data Analytics Essentials','Awarded by Cisco Networking Academy, covering fundamental concepts of data analytics, data-driven decision making, data visualization, and analytical thinking. (Jun 2026)', 'Data_Analytics_Essential.png')">
-        <div class="cert-img"><img src="Data_Analytics_Essential.png" alt="Data Analytics Essentials" style="width:100%;height:100%;object-fit:cover;display:block;"/><div class="cert-hover-overlay"><i class="fas fa-expand"></i></div></div>
+        <div class="cert-img"><img src="Data_Analytics_Essential.png" alt="Data Analytics Essentials" style="width:100%;height:100%;object-fit:contain;display:block;"/><div class="cert-hover-overlay"><i class="fas fa-expand"></i></div></div>
         <div class="cert-body"><h4>Data Analytics Essentials</h4><span>Cisco Networking Academy</span></div>
       </div>
 
       <div class="cert-card reveal" onclick="openModal('ACIT Program','Completed the ACIT (Advanced Certificate in Information Technology) program covering Microsoft Office, Advanced Excel, Tally ERP, Windows, Internet Applications, and Typing Skills. (Oct 2024)', 'Certificate_ACIT.JPG')">
-        <div class="cert-img"><img src="Certificate_ACIT.JPG" alt="ACIT Program" style="width:100%;height:100%;object-fit:cover;display:block;"/><div class="cert-hover-overlay"><i class="fas fa-expand"></i></div></div>
+        <div class="cert-img"><img src="Certificate_ACIT.JPG" alt="ACIT Program" style="width:100%;height:100%;object-fit:contain;display:block;"/><div class="cert-hover-overlay"><i class="fas fa-expand"></i></div></div>
         <div class="cert-body"><h4>ACIT Program (Adv. Excel, MS Office)</h4><span>Asset Computer Education</span></div>
       </div>
 
       <div class="cert-card reveal" onclick="openModal('Typing Skill','Completed Typing Skill Training, achieving a typing speed of 30 WPM. Developed efficient keyboarding techniques, accuracy, and productivity for data entry and office tasks. (Oct 2024)', 'Certificate_Typing.JPG')">
-        <div class="cert-img"><img src="Certificate_Typing.JPG" alt="Typing Skill" style="width:100%;height:100%;object-fit:cover;display:block;"/><div class="cert-hover-overlay"><i class="fas fa-expand"></i></div></div>
+        <div class="cert-img"><img src="Certificate_Typing.JPG" alt="Typing Skill" style="width:100%;height:100%;object-fit:contain;display:block;"/><div class="cert-hover-overlay"><i class="fas fa-expand"></i></div></div>
         <div class="cert-body"><h4>Typing Skill</h4><span>Asset Computer Education</span></div>
       </div>
 
       <div class="cert-card reveal" onclick="openModal('Cybersecurity Internship','Completed a Cyber Security Internship gaining hands-on knowledge of network security, vulnerability assessment, cyber threats, and information security practices. (May 2025)', 'Certificate_Cybersecurity.JPG')">
-        <div class="cert-img"><img src="Certificate_Cybersecurity.JPG" alt="Cybersecurity Internship" style="width:100%;height:100%;object-fit:cover;display:block;"/><div class="cert-hover-overlay"><i class="fas fa-expand"></i></div></div>
+        <div class="cert-img"><img src="Certificate_Cybersecurity.JPG" alt="Cybersecurity Internship" style="width:100%;height:100%;object-fit:contain;display:block;"/><div class="cert-hover-overlay"><i class="fas fa-expand"></i></div></div>
         <div class="cert-body"><h4>Cybersecurity Internship</h4><span>Cyberfortix Technologies Pvt. Ltd.</span></div>
       </div>
 
